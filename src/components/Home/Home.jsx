@@ -1,42 +1,39 @@
-import React from 'react'
+import React from 'react';
 import { HiArrowNarrowRight } from 'react-icons/hi';
-import {Link} from 'react-dom'
-import {
-  FaGithub,
-  FaLinkedin,
-  FaFacebook,
-  FaLinkedinIn,
-} from 'react-icons/fa';
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import { HiOutlineMail } from 'react-icons/hi';
+import bg from '../../assets/bg.svg';
+import pp from '../../assets/pp.svg';
+import Typewriter from 'react-typewriter-effect';
 
 function Home() {
   return (
-    <div name='home' className='w-full h-screen bg-[#010d1d] font-serif'>
-    {/* Container */}
-    <div className='max-w-[1000px] left-0 mx-[10px] px-8 flex flex-col justify-center h-full'>
-      <p className='text-emerald-800'>Hi, my name is</p>
-      <h1 className='text-3xl sm:text-5xl font-bold text-[#ffffff]'>
-            Shifa Tahreem 
-      </h1>
-      <h2 className='text-xl sm:text-4xl font-bold text-[#8892b0]'>
-        I'm a Full Stack Developer.
-      </h2>
-      <p className='text-[#8892b0] py-4 max-w-[800px]'>
-      I am a passionate third-year student specializing in web development, with hands-on experience in building dynamic websites using the MERN stack (MongoDB, Express, React, and Node.js). I enjoy turning creative ideas into functional web applications and have a keen eye for detail when it comes to front-end design, utilizing tools like Tailwind CSS and Bootstrap. I am constantly learning and looking for opportunities to apply my skills in real-world projects. 
-      </p>
-      <div>
-        <a></a>
-              </div>
-      <div>
-        <button className='flex items-center px-6 py-3 my-2 text-white border-2 group hover:bg-emerald-800 hover:border-emerald-800'>
-          View Work
-          <span className='duration-300 group-hover:rotate-90'>
-            <HiArrowNarrowRight className='ml-3 ' />
-          </span>
-        </button>
+    <div name="home" className="w-full h-screen font-serif text-white flex flex-col justify-center items-center text-center px-4">
+      {/* bg-gradient-to-b from-dark-blue via-blue to-dark-purple  */}
+      <div className="w-full h-full flex flex-col justify-center items-center text-center px-4">
+        <h1 className="text-4xl mb-4 sm:mt-5 md:text-5xl">
+          <Typewriter
+            text="Shifa Tahreem"
+            cursorColor="#ff4081"
+            typeSpeed={200} // Slower typing speed
+            deleteSpeed={100} // Speed of deleting text
+            delay={2000} // Delay before starting to type
+            repeat={true} // Repeats indefinitely
+            startDelay={500} // Delay before the first type
+          />
+        </h1>
+        <p className="text-2xl text-gray-300 md:text-3xl">I'm a Full-Stack Developer</p>
+        <p className="text-gray-400 mx-2 md:mx-40 md:mx-20">
+          I am a skilled full-stack developer with expertise in building dynamic and scalable web applications. I specialize in the MERN stack (MongoDB, Express, React, Node.js) and have a strong foundation in both frontend and backend development. My focus has been on designing responsive UIs, developing efficient APIs, and optimizing database performance. I actively explore new technologies and enjoy contributing to real-world projects and open-source initiatives.
+        </p>
+        <div>
+          <button className='p-3 mt-3 border-4 border-[#ff4081] bg-[#ff4081] text-white rounded-md hover:bg-transparent hover:text-[#ff4081] transition duration-300'>
+            Download CV
+          </button>
+        </div>
       </div>
     </div>
-  </div>
-  )
+  );
 }
 
-export default Home
+export default Home;
