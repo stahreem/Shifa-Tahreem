@@ -9,12 +9,14 @@ import Contact from './components/Contact/Contact'
 import { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css'; // Import the AOS styles globally
+import Footer from './Footer/Footer'
 function App() {
   
   useEffect(() => {
     AOS.init({
       offset: 200, // offset (in px) from the original trigger point
       duration: 3000, // values from 0 to 3000, with step 50m
+      delay: 500   // values from 0 to 3000, with step 50ms
     });
   }, []);
 
@@ -26,6 +28,7 @@ function App() {
      <Skills/>
      <Projects/>
      <Contact/>
+     <Footer/>
     </div>
   )
 }

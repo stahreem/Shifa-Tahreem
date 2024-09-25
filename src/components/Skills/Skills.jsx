@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React from 'react';
 import html from '../../assets/html.png';
 import css from '../../assets/css.png';
 import bootstrap from '../../assets/bootstrap.png';
@@ -12,27 +12,26 @@ import py from '../../assets/py.png';
 import git from '../../assets/git.png';
 import github from '../../assets/github.png';
 
+// SkillSet component
 const SkillSet = ({ title, skills }) => (
-  <div className="flex flex-col w-full mb-16 overflow-hidden">
-    <div className="flex w-full overflow-x-auto">
-      <div className="flex justify-start flex-none w-full space-x-16 overflow-hidden">
-        <p className="mb-4 text-2xl text-left"></p>
-        <div className='flex space-x-16 animate-loop-scroll'>
-          {skills.map((skill, index) => (
-            <img key={index} src={skill.src} alt={skill.alt} className='w-16 h-16 max-w-none' />
-          ))}
-        </div>
-        {/* Duplicate for infinite scrolling */}
-        <div className='flex space-x-16 animate-loop-scroll' aria-hidden='true'>
-          {skills.map((skill, index) => (
-            <img key={index} src={skill.src} alt={skill.alt} className='w-16 h-16 max-w-none' />
-          ))}
-        </div>
-      </div>
+  <div className="w-full mx-10 mb-16">
+    <h2 className="mb-4 text-2xl text-[#ff4081] font-bold text-left "
+    data-aos="fade-in" >{title}</h2>
+    <div className="grid grid-cols-3 gap-8 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6">
+      {skills.map((skill, index) => (
+        <img
+        data-aos="fade-in" 
+          key={index}
+          src={skill.src}
+          alt={skill.alt}
+          className={`w-16 h-16 my-4 ${index % 2 === 0 ? 'animate-float-up' : 'animate-float-down'}`} // Alternate between float-up and float-down
+        />
+      ))}
     </div>
   </div>
 );
 
+// Skills component
 function Skills() {
   const frontEndSkills = [
     { src: html, alt: 'HTML' },
@@ -52,22 +51,15 @@ function Skills() {
     { src: github, alt: 'Github' },
   ];
 
-  
-
   return (
-    <div name="skills" className="flex flex-col items-center justify-center w-full h-auto px-4 py-20 font-serif text-center text-white">
-      <h1 className="mt-4 text-4xl mb-14"
-       data-aos="fade-in" 
-       data-aos-id="super-duper">Skills</h1>
+    <div name="skills" className="flex flex-col items-center justify-center w-full h-auto px-4 py-10 font-serif text-center text-white">
+      <h1 className="mt-10 mb-10 text-3xl font-semibold" data-aos="fade-in" data-aos-id="super-duper">Skills</h1>
       
-      {/* Infinite Slider for Front-end Skills */}
+      {/* Front-end Skills */}
       <SkillSet title="Front-end" skills={frontEndSkills} />
 
-      {/* Infinite Slider for Back-end Skills */}
+      {/* Back-end Skills */}
       <SkillSet title="Back-end" skills={backEndSkills} />
-
-      {/* Infinite Slider for Languages */}
-      {/* <SkillSet title="Languages" skills={languageSkills} /> */}
     </div>
   );
 }

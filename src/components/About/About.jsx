@@ -11,7 +11,7 @@ function About() {
     >
       {/* About Me Heading with AOS Animation */}
       <h1
-        className="mt-[-50px] mb-4 text-4xl"
+        className="mt-[-50px] mb-4 text-3xl font-semibold"
         data-aos="fade-in" 
         data-aos-id="super-duper" // Fade-in animation
       >
@@ -52,8 +52,8 @@ function About() {
         {/* CV Download Button with AOS Fade-Right Animation */}
         <div>
           <button
-            // offset="50"
-            // data-aos="fade-right" // Applying fade-right animation to the button
+            offset="50"
+            data-aos="fade-right" // Applying fade-right animation to the button
             className="p-3 mt-5 border-4 border-[#ff4081] bg-[#ff4081] text-white rounded-md hover:bg-transparent hover:text-[#ff4081] transition duration-300"
           >
             Download CV
