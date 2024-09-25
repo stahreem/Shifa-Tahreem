@@ -56,7 +56,9 @@ function Skills() {
 
   return (
     <div name="skills" className="flex flex-col items-center justify-center w-full h-auto px-4 py-20 font-serif text-center text-white">
-      <h1 className="mt-4 text-4xl mb-14">Skills</h1>
+      <h1 className="mt-4 text-4xl mb-14"
+       data-aos="fade-in" 
+       data-aos-id="super-duper">Skills</h1>
       
       {/* Infinite Slider for Front-end Skills */}
       <SkillSet title="Front-end" skills={frontEndSkills} />

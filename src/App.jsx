@@ -1,5 +1,4 @@
 import './App.css'
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import About from './components/About/About'
 import Home from './components/Home/Home'
 import Navbar from './components/Navbar/Navbar'
@@ -20,7 +19,7 @@ function App() {
   }, []);
 
   return (
-    <div className='bg-gradient-to-b from-dark-blue via-blue to-dark-purple '>
+    <div className=' bg-gradient-to-b from-dark-blue via-blue to-dark-purple'>
      <Navbar/>
      <Home/>
      <About/>
