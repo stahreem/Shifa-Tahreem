@@ -16,7 +16,7 @@ function App() {
     AOS.init({
       offset: 200, // offset (in px) from the original trigger point
       duration: 3000, // values from 0 to 3000, with step 50m
-      delay: 500   // values from 0 to 3000, with step 50ms
+      delay: 300   // values from 0 to 3000, with step 50ms
     });
   }, []);
 

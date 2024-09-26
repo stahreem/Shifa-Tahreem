@@ -3,7 +3,7 @@ import { FaLinkedin, FaGithub } from 'react-icons/fa'; // Import icons
 
 function Footer() {
   return (
-    <div className='flex items-center justify-between w-full h-20 px-8 py-4 text-white bg-black'>
+    <div className='flex items-center justify-between w-full h-20 px-8 py-4 overflow-hidden text-white bg-black'>
       
       {/* Left section (Icons) */}
      

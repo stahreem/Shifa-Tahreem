@@ -5,11 +5,11 @@ function Projects() {
   return (
     <div name="projects" className="flex flex-col items-center justify-center w-full min-h-screen px-4 py-8 overflow-hidden font-serif text-center text-white">
       <h1 className="mb-8 text-3xl font-semibold" data-aos="fade-in" data-aos-id="super-duper">
-        Projects
+      Past Projects
       </h1>
       
       {/* Project Card */}
-      <div className='flex flex-col items-center justify-center w-full p-5 mb-8 bg-transparent border-2 rounded-lg lg:flex-row lg:max-w-4xl border-slate-800 bg-slate-800'
+      <div className='flex flex-col items-center justify-center w-full p-5 mb-8 border-2 rounded-lg lg:flex-row lg:max-w-4xl border-slate-800 bg-slate-800'
       data-aos="fade-down">
         
         {/* Image Section */}
@@ -30,14 +30,20 @@ function Projects() {
             <li className='px-4 py-1 border-2 rounded-md border-slate-900 bg-slate-900'>MongoDB</li>
           </ul>
           <div className="flex mt-5 space-x-4">
-            <button className="px-6 py-2 bg-[#38b2ac] text-white rounded-md hover:bg-transparent hover:text-[#38b2ac] border-2 border-[#38b2ac] transition duration-300">
+            <button className="px-6 py-2 font-semibold bg-[#38b2ac] text-white rounded-md hover:bg-transparent hover:text-[#38b2ac] border-2 border-[#38b2ac] transition duration-300">
+              <a
+              href='https://github.com/stahreem/Task-Management-'>
               Source Code
+              </a>
             </button>
-            <a className="px-6 py-2 mr-4 bg-[#1E90FF] text-white rounded-md hover:bg-transparent hover:text-[#1E90FF] border-2 border-[#1E90FF] transition duration-300"
-            href='https://github.com/stahreem/Task-Management-'
+            <button className="px-6 py-2 mr-4 bg-[#1E90FF] font-semibold text-white rounded-md hover:bg-transparent hover:text-[#1E90FF] border-2 border-[#1E90FF] transition duration-300"
             >
+              <a
+              href=''
+              >
               View Project
-            </a>
+              </a>
+            </button>
           </div>
         </div>
       </div>
@@ -45,7 +51,7 @@ function Projects() {
 
       {/* Repeat similar card structure for other projects */}
 
-      <div className='flex flex-col items-center justify-center w-full p-5 mb-8 bg-transparent border-2 rounded-2xl lg:flex-row lg:max-w-4xl border-slate-800 bg-slate-800'
+      <div className='flex flex-col items-center justify-center w-full p-5 mb-8 border-2 rounded-2xl lg:flex-row lg:max-w-4xl border-slate-800 bg-slate-800'
       data-aos="fade-down">
         
         {/* Image Section */}
@@ -59,7 +65,7 @@ function Projects() {
           <p className="mb-4 text-[15px] font-[550px] text-gray-200">A Task Management application with CRUD operations, utilizing MongoDB for data storage, and built with Node.js, Express, and API integration for user authentication.</p>
           
           {/* Tech Stack List */}
-          <ul className='flex flex-row items-center gap-5 text-xs font-semibold lg:items-start'>
+          <ul className='flex flex-wrap items-center gap-5 text-xs font-semibold lg:items-start'>
             <li className='px-4 py-1 border-2 rounded-md border-slate-900 bg-slate-900'>HTML</li>
             <li className='px-4 py-1 border-2 rounded-md border-slate-900 bg-slate-900'>CSS</li>
             <li className='px-4 py-1 border-2 rounded-md border-slate-900 bg-slate-900'>Node.js</li>
@@ -77,7 +83,7 @@ function Projects() {
             <button className="px-6 py-2 mr-4 font-semibold bg-[#1E90FF] text-white rounded-md hover:bg-transparent hover:text-[#1E90FF] border-2 border-[#1E90FF] transition duration-300"
             >
               <a
-              
+              href=''
               >
               View Project
               </a>

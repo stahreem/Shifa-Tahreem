@@ -15,7 +15,7 @@ function About() {
         data-aos="fade-in" 
         data-aos-id="super-duper" // Fade-in animation
       >
-        About Me
+        Get to Know Me
       </h1>
 
       <div className="flex flex-col px-10 md:mt-5">
@@ -56,7 +56,11 @@ function About() {
             data-aos="fade-right" // Applying fade-right animation to the button
             className="p-3 mt-5 border-4 border-[#ff4081] bg-[#ff4081] text-white rounded-md hover:bg-transparent hover:text-[#ff4081] transition duration-300"
           >
+            <a
+            href="/shifa.pdf"
+            download="My_CV.pdf">
             Download CV
+            </a>
           </button>
         </div>
       </div>

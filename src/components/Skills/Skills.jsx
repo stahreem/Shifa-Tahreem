@@ -53,7 +53,7 @@ function Skills() {
 
   return (
     <div name="skills" className="flex flex-col items-center justify-center w-full h-auto px-4 py-10 font-serif text-center text-white">
-      <h1 className="mt-10 mb-10 text-3xl font-semibold" data-aos="fade-in" data-aos-id="super-duper">Skills</h1>
+      <h1 className="mt-10 mb-10 text-3xl font-semibold" data-aos="fade-in" data-aos-id="super-duper">Skillset</h1>
       
       {/* Front-end Skills */}
       <SkillSet title="Front-end" skills={frontEndSkills} />

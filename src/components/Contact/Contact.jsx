@@ -23,10 +23,10 @@ function Contact() {
   };
 
   return (
-    <div name="contact" className="flex flex-col items-center justify-center w-full h-screen px-4 font-serif text-center text-white">
+    <div name="contact" className="flex flex-col items-center justify-center w-full h-screen px-4 overflow-hidden font-serif text-center text-white">
       <h1 className="mb-8 text-3xl font-semibold"
       data-aos="fade-in" 
-      data-aos-id="super-duper">Contact</h1>
+      data-aos-id="super-duper">Let's Talk</h1>
       
       {/* Main Container */}
       <div className="flex flex-col items-center justify-between w-full max-w-4xl gap-10 md:flex-row md:items-start md:mb-3 ">
