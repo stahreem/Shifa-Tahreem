@@ -11,7 +11,7 @@ function About() {
     >
       {/* About Me Heading with AOS Animation */}
       <h1
-        className="mt-[-50px] mb-4 text-3xl font-semibold"
+        className="mt-[-10px] mb-4 text-3xl font-semibold"
         data-aos="fade-in" 
         data-aos-id="super-duper" // Fade-in animation
       >
@@ -24,8 +24,8 @@ function About() {
           className="text-gray-100 md:mr-40"
           data-aos="fade-left" // Applying fade-left animation
         >
-          I’m Shifa Tahreem, a passionate Full-Stack Developer with a strong background in both frontend and backend technologies.
-          <br />
+         I'm Shifa Tahreem, a passionate Full-Stack Developer with a strong background in both frontend and backend technologies.
+         <br/>
           My journey in web development began a few years ago, driven by a deep curiosity about how the web works. Since then, I’ve immersed myself in various projects, from designing intuitive user interfaces to building scalable backend systems.
         </p>
 
@@ -35,8 +35,8 @@ function About() {
           data-aos="fade-right" // Applying fade-right animation
         >
           Throughout this journey, I’ve specialized in the MERN stack, enabling me to create dynamic and responsive applications.
-          <br />
-          I’m constantly exploring new technologies and love the challenge of solving complex problems with clean, efficient code.
+          <br/>
+           I have completed several courses and received certifications that validate my expertise in full-stack development, further enhancing my skills and knowledge.
         </p>
 
         {/* Third Paragraph with AOS Fade-Left Animation */}
@@ -44,9 +44,7 @@ function About() {
           className="text-gray-100 md:mx-40 md:mr-10"
           data-aos="fade-left" // Applying fade-left animation
         >
-          I’m a firm believer in continuous learning and love collaborating on projects that push the boundaries of innovation.
-          <br />
-          When I’m not coding, I enjoy contributing to open-source projects and staying updated with the latest industry trends.
+         I’m constantly exploring new technologies and love the challenge of solving complex problems with clean, efficient code. I'm a firm believer in continuous learning and enjoy collaborating on projects that push the boundaries of innovation. When I’m not coding, I contribute to open-source projects and stay updated with the latest industry trends.
         </p>
 
         {/* CV Download Button with AOS Fade-Right Animation */}
@@ -57,9 +55,9 @@ function About() {
             className="p-3 mt-5 border-4 border-[#ff4081] bg-[#ff4081] text-white rounded-md hover:bg-transparent hover:text-[#ff4081] transition duration-300"
           >
             <a
-            href="/shifa.pdf"
-            download="My_CV.pdf">
-            Download CV
+            href="Certificate.jpg"
+            download="Certificate.jpg">
+            Download Certificate
             </a>
           </button>
         </div>
