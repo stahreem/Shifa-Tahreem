@@ -96,8 +96,6 @@ function Projects() {
 
  {/* 3nd projects Pass word generator */}
 
-  
-
   <div className='flex flex-col items-center justify-center w-full p-5 mb-8 border-2 rounded-2xl lg:flex-row lg:max-w-4xl border-slate-800 bg-slate-800'
       data-aos="fade-down">
         
@@ -120,14 +118,14 @@ function Projects() {
           <div className="flex mt-5 space-x-4">
             <button className="px-6 py-2 font-semibold bg-[#38b2ac] text-white rounded-md hover:bg-transparent hover:text-[#38b2ac] border-2 border-[#38b2ac] transition duration-300">
               <a
-              href='https://github.com/stahreem/Currency-Converter-React-'>
+              href=''>
               Source Code
               </a>
             </button>
             <button className="px-6 py-2 mr-4 font-semibold bg-[#1E90FF] text-white rounded-md hover:bg-transparent hover:text-[#1E90FF] border-2 border-[#1E90FF] transition duration-300"
             >
               <a
-              href='https://globalexchanger.netlify.app/'
+              href=''
               >
               View Project
               </a>
@@ -215,7 +213,7 @@ function Projects() {
             <button className="px-6 py-2 mr-4 font-semibold bg-[#1E90FF] text-white rounded-md hover:bg-transparent hover:text-[#1E90FF] border-2 border-[#1E90FF] transition duration-300"
             >
               <a
-              href='https://github.com/stahreem/Books-Store-Management-/tree/main/OneDrive/Documents/Book%20store'
+              href=''
               >
               View Project
               </a>
