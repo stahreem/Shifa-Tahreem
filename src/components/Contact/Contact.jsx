@@ -69,7 +69,7 @@ function Contact() {
 
         {/* Right Section - Form */}
         <div className="w-full md:w-1/2" data-aos="fade-left">
-          <form
+          <form netlify
             className="flex flex-col gap-6"
             onSubmit={handleSubmit}
             name="contact" // Form name is important for Netlify to track submissions
