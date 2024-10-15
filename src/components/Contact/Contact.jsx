@@ -74,15 +74,15 @@ function Contact() {
             name="contact" // Form name is important for Netlify to track submissions
             method="post"
             data-netlify="true"
-            // netlify-honeypot="bot-field" // Spam protection field
+            netlify-honeypot="bot-field" // Spam protection field
           >
             {/* Hidden input required for Netlify form submission */}
-            {/* <input type="hidden" name="form-name" value="contact" />
+            <input type="hidden" name="form-name" value="contact" />
             
             {/* Hidden field to trap bots */}
-            {/* <div style={{ display: 'none' }}>
+             <div style={{ display: 'none' }}>
               <label>Don’t fill this out: <input name="bot-field" /></label>
-            </div> */} 
+            </div> 
 
             {/* Input fields */}
             <div>
