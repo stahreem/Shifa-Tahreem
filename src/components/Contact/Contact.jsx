@@ -80,9 +80,9 @@ function Contact() {
             <input type="hidden" name="form-name" value="contact" />
             
             {/* Hidden field to trap bots */}
-             <div style={{ display: 'none' }}>
+             {/* <div style={{ display: 'none' }}>
               <label>Don’t fill this out: <input name="bot-field" /></label>
-            </div> 
+            </div>  */}
 
             {/* Input fields */}
             <div>
