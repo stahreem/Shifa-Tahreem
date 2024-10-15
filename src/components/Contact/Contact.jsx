@@ -3,41 +3,41 @@ import { FaLinkedin, FaGithub } from 'react-icons/fa';
 import toast, { Toaster } from 'react-hot-toast'; // Import Hot Toast
 
 function Contact() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: '',
-  });
+  // const [formData, setFormData] = useState({
+  //   name: '',
+  //   email: '',
+  //   message: '',
+  // });
 
-  // Handle input changes
-  const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
-  };
+  // // Handle input changes
+  // const handleChange = (e) => {
+  //   setFormData({
+  //     ...formData,
+  //     [e.target.name]: e.target.value,
+  //   });
+  // };
 
-  // Handle form submission (handled by Netlify)
-  const handleSubmit = (e) => {
-    e.preventDefault(); // Prevent the default form submission
+  // // Handle form submission (handled by Netlify)
+  // const handleSubmit = (e) => {
+  //   e.preventDefault(); // Prevent the default form submission
 
-    const form = e.target; // Get the form element
-    const formSubmission = new FormData(form); // Create FormData object from the form
+  //   const form = e.target; // Get the form element
+  //   const formSubmission = new FormData(form); // Create FormData object from the form
 
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: new URLSearchParams(formSubmission).toString()
-    })
-      .then(() => {
-        toast.success("Message sent successfully!"); // Success toast
-        setFormData({ name: '', email: '', message: '' }); // Reset form
-      })
-      .catch((error) => {
-        toast.error("Oops! Something went wrong."); // Error toast
-        console.error("Error submitting form:", error);
-      });
-  };
+  //   fetch("/", {
+  //     method: "POST",
+  //     headers: { "Content-Type": "application/x-www-form-urlencoded" },
+  //     body: new URLSearchParams(formSubmission).toString()
+  //   })
+  //     .then(() => {
+  //       toast.success("Message sent successfully!"); // Success toast
+  //       setFormData({ name: '', email: '', message: '' }); // Reset form
+  //     })
+  //     .catch((error) => {
+  //       toast.error("Oops! Something went wrong."); // Error toast
+  //       console.error("Error submitting form:", error);
+  //     });
+  // };
 
   return (
     <div name="contact" className="flex flex-col items-center justify-center w-full h-screen px-4 overflow-hidden font-serif text-center text-white">
@@ -72,10 +72,10 @@ function Contact() {
           netlify
             className="flex flex-col gap-6"
             name="contact" // Form name is important for Netlify to track submissions
-            method="post"
-            // data-netlify="true"
+            method="POST"
+            data-netlify="true"
             netlify-honeypot="bot-field" // Spam protection field
-            onSubmit={handleSubmit} // Add the handleSubmit function here
+            // onSubmit={handleSubmit} // Add the handleSubmit function here
           >
             {/* Hidden input required for Netlify form submission */}
             <input type="hidden" name="form-name" value="contact" />
@@ -87,8 +87,8 @@ function Contact() {
                 type="text" 
                 placeholder="Name" 
                 name="name"
-                value={formData.name} // Controlled component
-                onChange={handleChange} // Controlled component
+                // value={formData.name} // Controlled component
+                // onChange={handleChange} // Controlled component
                 required
               />
             </div>
@@ -99,8 +99,8 @@ function Contact() {
                 type="email" 
                 placeholder="Email" 
                 name="email"
-                value={formData.email} // Controlled component
-                onChange={handleChange} // Controlled component
+                // value={formData.email} // Controlled component
+                // onChange={handleChange} // Controlled component
                 required                
               />
             </div>
@@ -111,8 +111,8 @@ function Contact() {
                 placeholder="Message..." 
                 rows="4"
                 name="message"
-                value={formData.message} // Controlled component
-                onChange={handleChange} // Controlled component
+                // value={formData.message} // Controlled component
+                // onChange={handleChange} // Controlled component
                 required
               />
             </div>
