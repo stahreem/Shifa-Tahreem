@@ -38,6 +38,9 @@ function Contact() {
         console.error("Error submitting form:", error);
       });
   };
+  document
+  .querySelector("form")
+  .addEventListener("submit", handleSubmit);
 
   return (
     <div name="contact" className="flex flex-col items-center justify-center w-full h-screen px-4 overflow-hidden font-serif text-center text-white">
