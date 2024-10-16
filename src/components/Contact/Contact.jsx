@@ -3,41 +3,41 @@ import { FaLinkedin, FaGithub } from 'react-icons/fa';
 import toast, { Toaster } from 'react-hot-toast'; // Import Hot Toast
 
 function Contact() {
-   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: '',
-  });
+  //  const [formData, setFormData] = useState({
+  //   name: '',
+  //   email: '',
+  //   message: '',
+  // });
 
-  // Handle input changes
-  const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
-  };
+  // // Handle input changes
+  // const handleChange = (e) => {
+  //   setFormData({
+  //     ...formData,
+  //     [e.target.name]: e.target.value,
+  //   });
+  // };
 
-  // Handle form submission (handled by Netlify)
-  const handleSubmit = (e) => {
-    e.preventDefault(); // Prevent the default form submission
+  // // Handle form submission (handled by Netlify)
+  // const handleSubmit = (e) => {
+  //   e.preventDefault(); // Prevent the default form submission
 
-    const form = e.target; // Get the form element
-    const formSubmission = new FormData(form); // Create FormData object from the form
+  //   const form = e.target; // Get the form element
+  //   const formSubmission = new FormData(form); // Create FormData object from the form
 
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: new URLSearchParams(formSubmission).toString()
-    })
-      .then(() => {
-        // toast.success("Message sent successfully!"); // Success toast
-        setFormData({ name: '', email: '', message: '' }); // Reset form
-      })
-      .catch((error) => {
-        // toast.error("Oops! Something went wrong."); // Error toast
-        console.error("Error submitting form:", error);
-      });
-  };
+  //   fetch("/", {
+  //     method: "POST",
+  //     headers: { "Content-Type": "application/x-www-form-urlencoded" },
+  //     body: new URLSearchParams(formSubmission).toString()
+  //   })
+  //     .then(() => {
+  //       // toast.success("Message sent successfully!"); // Success toast
+  //       setFormData({ name: '', email: '', message: '' }); // Reset form
+  //     })
+  //     .catch((error) => {
+  //       // toast.error("Oops! Something went wrong."); // Error toast
+  //       console.error("Error submitting form:", error);
+  //     });
+  // };
  
 
   return (
@@ -69,59 +69,19 @@ function Contact() {
 
         {/* Right Section - Form */}
         <div className="w-full md:w-1/2" data-aos="fade-left">
-          <form 
-          // netlify
-            className="flex flex-col gap-6"
-            name="contact" // Form name is important for Netlify to track submissions
-            method="POST"
-            data-netlify="true"
-            netlify-honeypot="bot-field" // Spam protection field
-            onSubmit={handleSubmit} // Add the handleSubmit function here
-          >
-            {/* Hidden input required for Netlify form submission */}
-            <input type="hidden" name="form-name" value="contact" />
-            
-            {/* Input fields */}
-            <div>
-              <input 
-                className="w-full p-4 border-2 border-slate-800 bg-slate-800 rounded-lg focus:outline-none focus:border-[#38b2ac] transition" 
-                type="text" 
-                placeholder="Name" 
-                name="name"
-                value={formData.name} // Controlled component
-                onChange={handleChange} // Controlled component
-                required
-              />
-            </div>
+        <form name="contact" method="POST" data-netlify="true">
+  <input type="hidden" name="form-name" value="contact" />
+  <p>
+    <label>Name: <input type="text" name="name" /></label>
+  </p>
+  <p>
+    <label>Email: <input type="email" name="email" /></label>
+  </p>
+  <p>
+    <button type="submit">Send</button>
+  </p>
+</form>
 
-            <div>
-              <input 
-                className="w-full p-4 border-2 border-slate-800 bg-slate-800 rounded-lg focus:outline-none focus:border-[#38b2ac] transition" 
-                type="email" 
-                placeholder="Email" 
-                name="email"
-                value={formData.email} // Controlled component
-                onChange={handleChange} // Controlled component
-                required                
-              />
-            </div>
-
-            <div>
-              <textarea 
-                className="w-full p-4 border-2 border-slate-800 bg-slate-800 rounded-lg focus:outline-none focus:border-[#38b2ac] transition" 
-                placeholder="Message..." 
-                rows="4"
-                name="message"
-                value={formData.message} // Controlled component
-                onChange={handleChange} // Controlled component
-                required
-              />
-            </div>
-
-            <button className="px-6 py-2 font-semibold bg-[#38b2ac] text-white rounded-md hover:bg-transparent hover:text-[#38b2ac] border-2 border-[#38b2ac] transition duration-300" type="submit">
-              Send
-            </button>
-          </form>
         </div>
 
       </div>
@@ -130,3 +90,58 @@ function Contact() {
 }
 
 export default Contact;
+
+
+// {/* <form 
+// // netlify
+//   className="flex flex-col gap-6"
+//   name="contact" // Form name is important for Netlify to track submissions
+//   method="POST"
+//   data-netlify="true"
+//   netlify-honeypot="bot-field" // Spam protection field
+//   onSubmit={handleSubmit} // Add the handleSubmit function here
+// >
+//   {/* Hidden input required for Netlify form submission */}
+//   <input type="hidden" name="form-name" value="contact" />
+  
+//   {/* Input fields */}
+//   <div>
+//     <input 
+//       className="w-full p-4 border-2 border-slate-800 bg-slate-800 rounded-lg focus:outline-none focus:border-[#38b2ac] transition" 
+//       type="text" 
+//       placeholder="Name" 
+//       name="name"
+//       value={formData.name} // Controlled component
+//       onChange={handleChange} // Controlled component
+//       required
+//     />
+//   </div>
+
+//   <div>
+//     <input 
+//       className="w-full p-4 border-2 border-slate-800 bg-slate-800 rounded-lg focus:outline-none focus:border-[#38b2ac] transition" 
+//       type="email" 
+//       placeholder="Email" 
+//       name="email"
+//       value={formData.email} // Controlled component
+//       onChange={handleChange} // Controlled component
+//       required                
+//     />
+//   </div>
+
+//   <div>
+//     <textarea 
+//       className="w-full p-4 border-2 border-slate-800 bg-slate-800 rounded-lg focus:outline-none focus:border-[#38b2ac] transition" 
+//       placeholder="Message..." 
+//       rows="4"
+//       name="message"
+//       value={formData.message} // Controlled component
+//       onChange={handleChange} // Controlled component
+//       required
+//     />
+//   </div>
+
+//   <button className="px-6 py-2 font-semibold bg-[#38b2ac] text-white rounded-md hover:bg-transparent hover:text-[#38b2ac] border-2 border-[#38b2ac] transition duration-300" type="submit">
+//     Send
+//   </button>
+// </form> */}
