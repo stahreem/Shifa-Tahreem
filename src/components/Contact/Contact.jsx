@@ -19,26 +19,42 @@ function Contact() {
 
         {/* Contact Information */}
         <div className="flex flex-col items-center gap-4" data-aos="fade-right" data-aos-delay="400">
-          {/* Email Links */}
-          <div className="flex items-center gap-2" data-aos="fade-right" data-aos-delay="600">
-            <FaEnvelope size={30} className="text-[#38b2ac] hover:text-white cursor-pointer" />
-            <a href="mailto:tahreemshifa14@gmail.com " target="_blank" rel="noopener noreferrer" className="text-white hover:text-[#38b2ac]">tahreemshifa14@gmail.com  </a>
-            <span className='text-cyan-400'>||</span>
-            <a href="mailto:shifatahreem313@gmail.com " target="_blank" rel="noopener noreferrer" className="text-white hover:text-[#38b2ac]">shifatahreem313@gmail.com </a>
-          </div>
+  {/* Email Links */}
+  <div className="flex flex-col items-center gap-2 sm:flex-row" data-aos="fade-right" data-aos-delay="600">
+    <div className="flex items-center gap-2">
+      <FaEnvelope size={30} className="text-[#38b2ac] hover:text-white cursor-pointer" />
+      <a href="mailto:tahreemshifa14@gmail.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-[#38b2ac]">
+        tahreemshifa14@gmail.com
+      </a>
+    </div>
 
-          {/* LinkedIn Link */}
-          <div className="flex items-center gap-2" data-aos="fade-right" data-aos-delay="800">
-            <FaLinkedin size={30} className="text-[#0A66C2] hover:text-white cursor-pointer" />
-            <a href="https://www.linkedin.com/in/shifa-tahreem-67607123a/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-[#38b2ac]">LinkedIn</a>
-          </div>
+    <span className="hidden sm:block text-cyan-400">||</span>
 
-          {/* GitHub Link */}
-          <div className="flex items-center gap-2" data-aos="fade-right" data-aos-delay="1000">
-            <FaGithub size={30} className="text-gray-800 cursor-pointer hover:text-white" />
-            <a href="https://github.com/stahreem" target="_blank" rel="noopener noreferrer" className="text-white hover:text-[#38b2ac]">GitHub</a>
-          </div>
-        </div>
+    <div className="flex items-center gap-2">
+      <FaEnvelope size={30} className="text-[#38b2ac] hover:text-white cursor-pointer" />
+      <a href="mailto:shifatahreem313@gmail.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-[#38b2ac]">
+        shifatahreem313@gmail.com
+      </a>
+    </div>
+  </div>
+
+  {/* LinkedIn Link */}
+  <div className="flex items-center gap-2" data-aos="fade-right" data-aos-delay="800">
+    <FaLinkedin size={30} className="text-[#0A66C2] hover:text-white cursor-pointer" />
+    <a href="https://www.linkedin.com/in/shifa-tahreem-67607123a/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-[#38b2ac]">
+      LinkedIn
+    </a>
+  </div>
+
+  {/* GitHub Link */}
+  <div className="flex items-center gap-2" data-aos="fade-right" data-aos-delay="1000">
+    <FaGithub size={30} className="text-gray-800 cursor-pointer hover:text-white" />
+    <a href="https://github.com/stahreem" target="_blank" rel="noopener noreferrer" className="text-white hover:text-[#38b2ac]">
+      GitHub
+    </a>
+  </div>
+</div>
+
       </div>
     </div>
   );
