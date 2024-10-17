@@ -7,10 +7,10 @@ function Contact() {
     <div name="contact" className="flex flex-col items-center justify-center w-full h-screen px-4 overflow-hidden font-serif text-center text-white">
       <Toaster position="top-right" /> {/* Hot Toast container */}
       
-      <h1 className="mb-4 text-3xl font-semibold" data-aos="fade-in" data-aos-id="super-duper">Let's Talk</h1>
+      <h1 className="mb-4 text-3xl font-semibold mt-[-10px]" data-aos="fade-in" data-aos-id="super-duper">Let's Talk</h1>
       
       {/* Main Container */}
-      <div className="flex flex-col items-center justify-between w-full max-w-4xl gap-10 md:flex-row md:items-start md:mb-3 ">
+      <div className="flex flex-col items-center justify-between w-full max-w-4xl gap-10 md:flex-row md:items-start md:mb-3">
         
         {/* Left Section - Social Links */}
         <div className="flex flex-col items-center justify-start gap-6 text-xl font-medium text-slate-900 md:items-start" data-aos="fade-right">
@@ -19,21 +19,20 @@ function Contact() {
             Don't hesitate to get in touch with any inquiries, collaboration ideas, or project proposals!
           </p>
 
-          {/* Glowing message */}
-          <div className="text-gray-500">
-            <p className="text-[18px] font-semibold text-center md:text-left text-gray-200 glow">
-              <span className="glowing-text">
-               <span className='text-cyan-700 font-bold'> Unfortunately,</span> the contact form is currently not working. You can reach out to me via email or connect with me on LinkedIn.
+          <p className="text-[15px] md:text-[20px] font-semibold text-center md:text-left text-gray-200 glow">
+              <span className="break-words whitespace-normal px-18 glowing-text md:text-sm ">
+               <span className='font-bold text-cyan-700'>Unfortunately,</span> the contact form is currently not working.<br/>You can reach out to me via email or connect with me on LinkedIn.
               </span>
             </p>
-          </div>
+          
+        
 
           {/* Social Links - Email */}
           <div className="flex items-center gap-4 md:mb-4">
             <FaEnvelope size={40} className="text-[#38b2ac] hover:text-white cursor-pointer" />
-            <a href="mailto:tahreemshifa14@gmail.com " target="_blank" rel="noopener noreferrer" className="text-white hover:text-[#38b2ac]">tahreemshifa14@gmail.com  </a>
+            <a href="mailto:tahreemshifa14@gmail.com " target="_blank" rel="noopener noreferrer" className="text-white  text-[13px] hover:text-[#38b2ac]">tahreemshifa14@gmail.com  </a>
             <span className='text-cyan-400'>||</span>
-            <a href="mailto:shifatahreem313@gmail.com " target="_blank" rel="noopener noreferrer" className="text-white hover:text-[#38b2ac]">shifatahreem313@gmail.com </a>
+            <a href="mailto:shifatahreem313@gmail.com " target="_blank" rel="noopener noreferrer" className="text-white text-[13px] hover:text-[#38b2ac]">shifatahreem313@gmail.com </a>
           </div>
 
           {/* Social Links - LinkedIn */}
@@ -92,7 +91,7 @@ function Contact() {
               />
             </div>
 
-            <button className="px-6 py-2 font-semibold bg-[#38b2ac] text-white rounded-md hover:bg-transparent hover:text-[#38b2ac] border-2 border-[#38b2ac] transition duration-300" type="submit">
+            <button className="px-6 py-2 font-semibold bg-[#38b2ac] text-white rounded-md  hover:bg-transparent hover:text-[#38b2ac] border-2 border-[#38b2ac] transition duration-300" type="submit">
               Send
             </button>
           </form>
